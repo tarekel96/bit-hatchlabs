@@ -1,0 +1,16 @@
+@import "./styles/tokens.scss";
+
+.App {
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $ocean-blue;
+    color: $pearl-white;
+  }
+}
+
+section button {
+  margin: 1rem;
+}
