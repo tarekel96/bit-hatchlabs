@@ -47,7 +47,8 @@ Button.propTypes = {
    */
   content: PropTypes.string,
   /**
-   * The version of a button ie primary, secondary, text, etc
+   * The version of a button ie primary, secondary, text, etc.
+   * Possible combinations: primary, primary-disabled, secondary, secondary-disabled, text, text-disabled, text-yellow, text-orange, text-blue, text-aqua
    */
   version: PropTypes.string,
   /**
@@ -62,10 +63,6 @@ Button.propTypes = {
    * Includes an icon to the right of the content
    */
   rightIcon: PropTypes.bool,
-  /**
-   * Includes a squigglyLine if provided
-   */
-  squigglyLine: PropTypes.bool,
 };
 
 Button.defaultProps = {

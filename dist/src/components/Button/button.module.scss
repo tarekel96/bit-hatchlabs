@@ -1,0 +1,355 @@
+// tokens from Zero Height
+@import "../../styles/tokens.scss";
+// Google Raleway font
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap");
+
+/***** BASE BUTTON *****/
+button {
+  border-radius: 4px;
+  font-family: Raleway;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: bold;
+  text-transform: uppercase;
+  height: 48px;
+  width: 122px;
+  text-align: center;
+  color: $deep-fishing-blue;
+}
+
+button:hover {
+  cursor: url("../../bubble.svg"), pointer;
+}
+
+/***** DANGER BUTTON *****/
+.danger {
+  background-color: $coral-red;
+  color: $pearl-white;
+}
+
+/***** SMALL BUTTON *****/
+.small {
+  height: 48px;
+}
+
+/***** BIG BUTTON *****/
+.big {
+  height: 64px;
+}
+
+/***** MEDIA QUERIES - RESPONSIVE *****/
+@media (max-width: 550px) {
+  button {
+    height: 40px;
+  }
+}
+
+/***** PRIMARY BUTTON - (LIGHT MODE) *****/
+@media (prefers-color-scheme: light) {
+  .primary {
+    background-color: $deep-fishing-blue;
+    color: $pearl-white;
+  }
+
+  .primary-clicked {
+    background-blend-mode: multiply;
+    background-color: #406195;
+    color: $pearl-white;
+    border: none;
+  }
+
+  .primary-disabled,
+  .primary-disabled-clicked {
+    background-color: $fin-grey;
+    color: $stingray-grey;
+  }
+
+  .primary:hover,
+  .primary-clicked:hover {
+    cursor: url("../../bubble-primary.svg") pointer;
+  }
+}
+
+/***** PRIMARY BUTTON - (DARK MODE) *****/
+@media (prefers-color-scheme: dark) {
+  .primary {
+    background-color: $pearl-white;
+    color: $deep-fishing-blue;
+  }
+
+  .primary-clicked {
+    background-color: $tide-pool-blue;
+    color: $deep-fishing-blue;
+    border: 2px solid $deep-fishing-blue;
+  }
+
+  .primary-disabled,
+  .primary-disabled-clicked {
+    background-color: $fin-grey;
+    color: $stingray-grey;
+  }
+
+  .primary:hover,
+  .primary-clicked:hover {
+    cursor: url("../../bubble-primary.svg") pointer;
+  }
+}
+
+/***** SECONDARY BUTTON - (LIGHT MODE) *****/
+@media (prefers-color-scheme: light) {
+  .secondary {
+    background-color: $pearl-white;
+    color: $deep-fishing-blue;
+    border: 2px solid $deep-fishing-blue;
+  }
+
+  .secondary-clicked {
+    background-color: $tide-pool-blue;
+    color: $deep-fishing-blue;
+    border: 2px solid $deep-fishing-blue;
+  }
+
+  .secondary:hover,
+  .secondary-clicked:hover {
+    cursor: url("../../bubble-secondary.svg") pointer;
+  }
+
+  .secondary-disabled,
+  .secondary-disabled-clicked {
+    color: $stingray-grey;
+    border-color: 2px solid $stingray-grey;
+    background-color: $pearl-white;
+  }
+}
+
+/***** SECONDARY BUTTON - (DARK MODE) *****/
+@media (prefers-color-scheme: dark) {
+  .secondary {
+    background-color: $ocean-blue;
+    color: $pearl-white;
+    border: 2px solid $pearl-white;
+  }
+
+  .secondary-clicked {
+    background-color: #465273;
+    color: $pearl-white;
+    border: 2px solid $pearl-white;
+  }
+
+  .secondary:hover,
+  .secondary-clicked:hover {
+    cursor: url("../../bubble-secondary.svg") pointer;
+  }
+
+  .secondary-disabled,
+  .secondary-disabled-clicked {
+    color: $seal-grey;
+    border-color: 2px solid $seal-grey;
+    background-color: $ocean-blue;
+  }
+}
+
+/***** TEXT BUTTONS - (LIGHT MODE) *****/
+@media (prefers-color-scheme: light) {
+  .text {
+    background-color: $pearl-white;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text-clicked {
+    background-color: $tide-pool-blue;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text:hover,
+  .text-clicked:hover {
+    cursor: url("../../bubble-text.svg"), pointer;
+  }
+
+  /***** TEXT DISABLED BUTTON *****/
+  .text-disabled {
+    color: $stingray-grey;
+    background-color: $pearl-white;
+    border: none;
+  }
+
+  .text-disabled-clicked {
+    color: $stingray-grey;
+    background-color: $pearl-white;
+    border: none;
+  }
+
+  /***** TEXT BUTTON (YELLOW COLOR) - only used in LIGHT MODE *****/
+  .text-yellow {
+    background-color: $pearl-white;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text-yellow-clicked {
+    background-color: $seahorse-yellow;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text-yellow:hover,
+  .text-yellow-clicked:hover {
+    cursor: url("../../bubble-text.svg"), pointer;
+  }
+
+  /***** TEXT BUTTON (ORANGE COLOR) - only used in LIGHT MODE *****/
+  .text-orange {
+    background-color: $pearl-white;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text-orange-clicked {
+    background-color: $starfish-orange;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text-orange:hover,
+  .text-orange-clicked:hover {
+    cursor: url("../../bubble-text.svg"), pointer;
+  }
+
+  /***** TEXT BUTTON (BLUE COLOR) - only used in LIGHT MODE *****/
+  .text-blue {
+    background-color: $pearl-white;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text-blue-clicked {
+    background-color: $undertow-blue;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text-blue:hover,
+  .text-blue-clicked:hover {
+    cursor: url("../../bubble-text.svg"), pointer;
+  }
+
+  /***** TEXT BUTTON (AQUA COLOR) - only used in LIGHT MODE *****/
+  .text-aqua {
+    background-color: $pearl-white;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text-aqua-clicked {
+    background-color: $sea-glass-aqua;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text-aqua:hover,
+  .text-aqua-clicked:hover {
+    cursor: url("../../bubble-text.svg"), pointer;
+  }
+}
+
+/***** TEXT BUTTONS - (DARK MODE) *****/
+@media (prefers-color-scheme: dark) {
+  .text,
+  .text-yellow,
+  .text-orange,
+  .text-blue,
+  .text-aqua {
+    background-color: $ocean-blue;
+    color: $pearl-white;
+    border: none;
+  }
+
+  .text-clicked,
+  .text-yellow-clicked,
+  .text-orange-clicked,
+  .text-blue-clicked,
+  .text-aqua-clicked {
+    background-color: #465273;
+    color: $pearl-white;
+    border: none;
+  }
+
+  .text,
+  .text-yellow,
+  .text-orange,
+  .text-blue,
+  .text-aqua,
+  .text-clicked,
+  .text-yellow-clicked,
+  .text-orange-clicked,
+  .text-blue-clicked,
+  .text-aqua-clicked :hover {
+    cursor: url("../../bubble-text-dmode.svg"), pointer;
+  }
+
+  /***** TEXT DISABLED BUTTON *****/
+  .text-disabled,
+  .text-disabled-clicked {
+    color: $stingray-grey;
+    background-color: $ocean-blue;
+    border: none;
+  }
+}
+
+/***** TEXT WITH LINK BUTTON (LIGHT MODE) *****/
+@media (prefers-color-scheme: light) {
+  .text-link {
+    background-color: $pearl-white;
+    color: $deep-fishing-blue;
+    border: none;
+  }
+
+  .text-link-clicked {
+    text-decoration: underline;
+    border: none;
+  }
+
+  .text-link:hover,
+  .text-link-clicked:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+/***** TEXT WITH LINK BUTTON (DARK MODE) *****/
+@media (prefers-color-scheme: dark) {
+  .text-link {
+    background-color: $ocean-blue;
+    color: $pearl-white;
+    border: none;
+  }
+
+  .text-link-clicked {
+    background-color: $ocean-blue;
+    color: $pearl-white;
+    text-decoration: underline;
+    border: none;
+  }
+
+  .text-link:hover,
+  .text-link-clicked:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+}
+
+.icon-left {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 0.4rem;
+}
+
+.icon-right {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0.4rem;
+}
