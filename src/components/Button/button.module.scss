@@ -6,6 +6,18 @@
 // Adobe Objecktiv Mk2 font
 @import url("https://use.typekit.net/blp0kkw.css");
 
+.bubble {
+  z-index: -1;
+  position: "absolute";
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  left: 50%;
+  //margin-left: -50px;
+  top: 50%;
+  //margin-top: -50px;
+}
+
 /***** BASE BUTTON *****/
 button {
   height: 48px;
@@ -20,8 +32,9 @@ button {
   color: $deep-fishing-blue;
 }
 
-button p {
-  display: flex row;
+button div {
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: space-around;
 }
