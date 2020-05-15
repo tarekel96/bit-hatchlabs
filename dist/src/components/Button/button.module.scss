@@ -3,22 +3,31 @@
 // Google Raleway font
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap");
 
+// Adobe Objecktiv Mk2 font
+@import url("https://use.typekit.net/blp0kkw.css");
+
 /***** BASE BUTTON *****/
 button {
+  height: 48px;
+  min-width: 122px;
+  padding: 0 24px;
   border-radius: 4px;
-  font-family: Raleway;
+  font-family: Objektiv Mk2 Raleway sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: bold;
   text-transform: uppercase;
-  height: 48px;
-  width: 122px;
-  text-align: center;
   color: $deep-fishing-blue;
 }
 
+button p {
+  display: flex row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 button:hover {
-  cursor: url("../../bubble.svg"), pointer;
+  cursor: url("../../styles/svg/bubble.svg") 16 16, move;
 }
 
 /***** DANGER BUTTON *****/
@@ -39,7 +48,10 @@ button:hover {
 
 /***** MEDIA QUERIES - RESPONSIVE *****/
 @media (max-width: 550px) {
-  button {
+  .primary,
+  .primary-clicked,
+  .secondary,
+  .secondary-clicked {
     height: 40px;
   }
 }
@@ -66,7 +78,7 @@ button:hover {
 
   .primary:hover,
   .primary-clicked:hover {
-    cursor: url("../../bubble-primary.svg") pointer;
+    cursor: url("../../styles/svg/bubble-primary.svg") 16 16, move;
   }
 }
 
@@ -91,7 +103,7 @@ button:hover {
 
   .primary:hover,
   .primary-clicked:hover {
-    cursor: url("../../bubble-primary.svg") pointer;
+    cursor: url("../../styles/svg/bubble-primary-dmode.svg") 16 16, move;
   }
 }
 
@@ -111,7 +123,7 @@ button:hover {
 
   .secondary:hover,
   .secondary-clicked:hover {
-    cursor: url("../../bubble-secondary.svg") pointer;
+    cursor: url("../../styles/svg/bubble-secondary.svg") 16 16, move;
   }
 
   .secondary-disabled,
@@ -138,7 +150,7 @@ button:hover {
 
   .secondary:hover,
   .secondary-clicked:hover {
-    cursor: url("../../bubble-secondary.svg") pointer;
+    cursor: url("../../styles/svg/bubble-secondary-dmode.svg") 16 16, move;
   }
 
   .secondary-disabled,
@@ -147,6 +159,11 @@ button:hover {
     border-color: 2px solid $seal-grey;
     background-color: $ocean-blue;
   }
+}
+
+/***** TEXT BUTTONS *****/
+.text {
+  height: 24px;
 }
 
 /***** TEXT BUTTONS - (LIGHT MODE) *****/
@@ -165,7 +182,7 @@ button:hover {
 
   .text:hover,
   .text-clicked:hover {
-    cursor: url("../../bubble-text.svg"), pointer;
+    cursor: url("../../styles/svg/bubble-text.svg") 16 16, move;
   }
 
   /***** TEXT DISABLED BUTTON *****/
@@ -182,78 +199,82 @@ button:hover {
   }
 
   /***** TEXT BUTTON (YELLOW COLOR) - only used in LIGHT MODE *****/
-  .text-yellow {
-    background-color: $pearl-white;
-    color: $deep-fishing-blue;
-    border: none;
-  }
+  @media (prefers-color-scheme: light) {
+    .text-yellow {
+      background-color: $pearl-white;
+      color: $deep-fishing-blue;
+      border: none;
+    }
 
-  .text-yellow-clicked {
-    background-color: $seahorse-yellow;
-    color: $deep-fishing-blue;
-    border: none;
-  }
+    .text-yellow-clicked {
+      background-color: $seahorse-yellow;
+      color: $deep-fishing-blue;
+      border: none;
+    }
 
-  .text-yellow:hover,
-  .text-yellow-clicked:hover {
-    cursor: url("../../bubble-text.svg"), pointer;
+    .text-yellow:hover,
+    .text-yellow-clicked:hover {
+      cursor: url("../../styles/svg/bubble-text.svg") 16 16, move;
+    }
   }
-
   /***** TEXT BUTTON (ORANGE COLOR) - only used in LIGHT MODE *****/
-  .text-orange {
-    background-color: $pearl-white;
-    color: $deep-fishing-blue;
-    border: none;
-  }
+  @media (prefers-color-scheme: light) {
+    .text-orange {
+      background-color: $pearl-white;
+      color: $deep-fishing-blue;
+      border: none;
+    }
 
-  .text-orange-clicked {
-    background-color: $starfish-orange;
-    color: $deep-fishing-blue;
-    border: none;
-  }
+    .text-orange-clicked {
+      background-color: $starfish-orange;
+      color: $deep-fishing-blue;
+      border: none;
+    }
 
-  .text-orange:hover,
-  .text-orange-clicked:hover {
-    cursor: url("../../bubble-text.svg"), pointer;
+    .text-orange:hover,
+    .text-orange-clicked:hover {
+      cursor: url("../../styles/svg/bubble-text.svg") 16 16, move;
+    }
   }
-
   /***** TEXT BUTTON (BLUE COLOR) - only used in LIGHT MODE *****/
-  .text-blue {
-    background-color: $pearl-white;
-    color: $deep-fishing-blue;
-    border: none;
-  }
+  @media (prefers-color-scheme: light) {
+    .text-blue {
+      background-color: $pearl-white;
+      color: $deep-fishing-blue;
+      border: none;
+    }
 
-  .text-blue-clicked {
-    background-color: $undertow-blue;
-    color: $deep-fishing-blue;
-    border: none;
-  }
+    .text-blue-clicked {
+      background-color: $undertow-blue;
+      color: $deep-fishing-blue;
+      border: none;
+    }
 
-  .text-blue:hover,
-  .text-blue-clicked:hover {
-    cursor: url("../../bubble-text.svg"), pointer;
+    .text-blue:hover,
+    .text-blue-clicked:hover {
+      cursor: url("../../styles/svg/bubble-text.svg") 16 16, move;
+    }
   }
-
   /***** TEXT BUTTON (AQUA COLOR) - only used in LIGHT MODE *****/
-  .text-aqua {
-    background-color: $pearl-white;
-    color: $deep-fishing-blue;
-    border: none;
-  }
+  @media (prefers-color-scheme: light) {
+    .text-aqua {
+      background-color: $pearl-white;
+      color: $deep-fishing-blue;
+      border: none;
+    }
 
-  .text-aqua-clicked {
-    background-color: $sea-glass-aqua;
-    color: $deep-fishing-blue;
-    border: none;
-  }
+    .text-aqua-clicked {
+      background-color: $sea-glass-aqua;
+      color: $deep-fishing-blue;
+      border: none;
+    }
 
-  .text-aqua:hover,
-  .text-aqua-clicked:hover {
-    cursor: url("../../bubble-text.svg"), pointer;
+    .text-aqua:hover,
+    .text-aqua-clicked:hover {
+      cursor: url("../../styles/svg/bubble-text.svg") 16 16, move;
+    }
   }
 }
-
 /***** TEXT BUTTONS - (DARK MODE) *****/
 @media (prefers-color-scheme: dark) {
   .text,
@@ -286,7 +307,7 @@ button:hover {
   .text-orange-clicked,
   .text-blue-clicked,
   .text-aqua-clicked :hover {
-    cursor: url("../../bubble-text-dmode.svg"), pointer;
+    cursor: url("../../styles/svg/bubble-text-dmode.svg") 16 16, move;
   }
 
   /***** TEXT DISABLED BUTTON *****/
@@ -309,6 +330,7 @@ button:hover {
   .text-link-clicked {
     text-decoration: underline;
     border: none;
+    background-color: $pearl-white;
   }
 
   .text-link:hover,
@@ -340,16 +362,27 @@ button:hover {
   }
 }
 
-.icon-left {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-right: 0.4rem;
-}
+/***** ARROW ICONS (LIGHT MODE) *****/
+@media (prefers-color-scheme: light) {
+  .icon-left {
+    padding-right: 16px;
+    fill: $deep-fishing-blue;
+  }
 
-.icon-right {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  margin-left: 0.4rem;
+  .icon-right {
+    padding-left: 16px;
+    fill: $deep-fishing-blue;
+  }
+}
+/***** ARROW ICONS (DARK MODE) *****/
+@media (prefers-color-scheme: dark) {
+  .icon-left {
+    padding-right: 16px;
+    fill: $pearl-white;
+  }
+
+  .icon-right {
+    padding-left: 16px;
+    fill: $pearl-white;
+  }
 }
