@@ -30,14 +30,15 @@ function _iterableToArrayLimit(arr, i) { if (typeof Symbol === "undefined" || !(
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 /**
- * A simple React button component
+ * A React button component that dynamically changes themes, sizes, and adds arrow icons depending on the props passed to it.
+ * Possible theme combinations: primary, primary-disabled, secondary, secondary-disabled, text, text-disabled, text-yellow, text-orange, text-blue, text-aqua
  * @name Button
- * @param content the content for the button
- * @param verison the version of a button. Possible combinations: primary, primary-disabled, secondary, secondary-disabled, text, text-disabled, text-yellow, text-orange, text-blue, text-aqua
- * @param size the size for a button: "big" or "small"
- * @param leftArrow includes an arrow icon to the left of the content
- * @param rightArrow includes an arrow icon to the right of the content
- * @returns {} returns a simple button component with various prop options to change it's styling
+ * @param content - the content for the button
+ * @param verison - the version of a button.
+ * @param size - the size for a button: "big" or "small"
+ * @param leftArrow - includes an arrow icon to the left of the content
+ * @param rightArrow - includes an arrow icon to the right of the content
+ * @returns- returns a simple button component with various prop options to change it's styling
  */
 function Button(_ref) {
   var _ref$content = _ref.content,
