@@ -9,8 +9,6 @@ exports.default = Button;
 
 var _react = _interopRequireWildcard(require("react"));
 
-var _propTypes = _interopRequireDefault(require("prop-types"));
-
 var _buttonModule = _interopRequireDefault(require("./button.module.scss"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -34,55 +32,40 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 /**
  * A simple React button component
  * @name Button
+ * @param content the content for the button
+ * @param verison the version of a button. Possible combinations: primary, primary-disabled, secondary, secondary-disabled, text, text-disabled, text-yellow, text-orange, text-blue, text-aqua
+ * @param size the size for a button: "big" or "small"
+ * @param leftArrow includes an arrow icon to the left of the content
+ * @param rightArrow includes an arrow icon to the right of the content
  * @returns {} returns a simple button component with various prop options to change it's styling
  */
-function Button(props) {
+function Button(_ref) {
+  var _ref$content = _ref.content,
+      content = _ref$content === void 0 ? "Button" : _ref$content,
+      _ref$version = _ref.version,
+      version = _ref$version === void 0 ? "primary" : _ref$version,
+      _ref$size = _ref.size,
+      size = _ref$size === void 0 ? "small" : _ref$size,
+      _ref$leftIcon = _ref.leftIcon,
+      leftIcon = _ref$leftIcon === void 0 ? false : _ref$leftIcon,
+      _ref$rightIcon = _ref.rightIcon,
+      rightIcon = _ref$rightIcon === void 0 ? false : _ref$rightIcon;
+
   var _useState = (0, _react.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
       clicked = _useState2[0],
       setClick = _useState2[1];
 
   return /*#__PURE__*/_react.default.createElement("button", {
-    className: "\n        button \n        ".concat(_buttonModule.default[props.version + clicked], "\n        ").concat(_buttonModule.default[props.size], "\n  "),
+    className: "\n        button \n        ".concat(_buttonModule.default[version + clicked], "\n        ").concat(_buttonModule.default[size], "\n  "),
     onClick: function onClick() {
       setClick("-clicked");
     },
-    size: props.size
-  }, /*#__PURE__*/_react.default.createElement("div", null, props.leftIcon ? /*#__PURE__*/_react.default.createElement(LeftArrow, null) : "", /*#__PURE__*/_react.default.createElement("span", {
+    size: size
+  }, /*#__PURE__*/_react.default.createElement("div", null, leftIcon ? /*#__PURE__*/_react.default.createElement(LeftArrow, null) : "", /*#__PURE__*/_react.default.createElement("span", {
     className: "button-content"
-  }, props.content), props.rightIcon ? /*#__PURE__*/_react.default.createElement(RightArrow, null) : ""));
+  }, content), rightIcon ? /*#__PURE__*/_react.default.createElement(RightArrow, null) : ""));
 }
-
-Button.propTypes = {
-  /**
-   * The content for the button
-   */
-  content: _propTypes.default.string,
-
-  /**
-   * The version of a button ie primary, secondary, text, etc.
-   * Possible combinations: primary, primary-disabled, secondary, secondary-disabled, text, text-disabled, text-yellow, text-orange, text-blue, text-aqua
-   */
-  version: _propTypes.default.string,
-
-  /**
-   * The size for a button: "big" or "small"
-   */
-  size: _propTypes.default.string,
-
-  /**
-   * Includes an icon to the left of the content
-   */
-  leftIcon: _propTypes.default.bool,
-
-  /**
-   * Includes an icon to the right of the content
-   */
-  rightIcon: _propTypes.default.bool
-};
-Button.defaultProps = {
-  content: "Content"
-};
 
 var LeftArrow = function LeftArrow(props) {
   return /*#__PURE__*/_react.default.createElement("svg", {
