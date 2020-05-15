@@ -7,8 +7,9 @@
 button {
   height: 48px;
   min-width: 122px;
+  padding: 0 24px;
   border-radius: 4px;
-  font-family: Raleway;
+  font-family: Objektiv Mk2 Raleway sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: bold;
@@ -20,7 +21,6 @@ button p {
   display: flex row;
   align-items: center;
   justify-content: space-around;
-  padding: 0;
 }
 
 button:hover {
@@ -44,12 +44,14 @@ button:hover {
 }
 
 /***** MEDIA QUERIES - RESPONSIVE *****/
-//TODO
-// @media (max-width: 550px) {
-//   button {
-//     height: 40px;
-//   }
-// }
+@media (max-width: 550px) {
+  .primary,
+  .primary-clicked,
+  .secondary,
+  .secondary-clicked {
+    height: 40px;
+  }
+}
 
 /***** PRIMARY BUTTON - (LIGHT MODE) *****/
 @media (prefers-color-scheme: light) {
@@ -98,7 +100,7 @@ button:hover {
 
   .primary:hover,
   .primary-clicked:hover {
-    cursor: url("../../styles/svg/bubble-primary.svg") 16 16, move;
+    cursor: url("../../styles/svg/bubble-primary-dmode.svg") 16 16, move;
   }
 }
 
@@ -145,7 +147,7 @@ button:hover {
 
   .secondary:hover,
   .secondary-clicked:hover {
-    cursor: url("../../styles/svg/bubble-secondary.svg") 16 16, move;
+    cursor: url("../../styles/svg/bubble-secondary-dmode.svg") 16 16, move;
   }
 
   .secondary-disabled,
@@ -154,6 +156,11 @@ button:hover {
     border-color: 2px solid $seal-grey;
     background-color: $ocean-blue;
   }
+}
+
+/***** TEXT BUTTONS *****/
+.text {
+  height: 24px;
 }
 
 /***** TEXT BUTTONS - (LIGHT MODE) *****/
@@ -355,24 +362,24 @@ button:hover {
 /***** ARROW ICONS (LIGHT MODE) *****/
 @media (prefers-color-scheme: light) {
   .icon-left {
-    margin-right: 0.4rem;
+    padding-right: 16px;
     fill: $deep-fishing-blue;
   }
 
   .icon-right {
-    margin-left: 0.4rem;
+    padding-left: 16px;
     fill: $deep-fishing-blue;
   }
 }
 /***** ARROW ICONS (DARK MODE) *****/
 @media (prefers-color-scheme: dark) {
   .icon-left {
-    margin-right: 0.4rem;
+    padding-right: 16px;
     fill: $pearl-white;
   }
 
   .icon-right {
-    margin-left: 0.4rem;
+    padding-left: 16px;
     fill: $pearl-white;
   }
 }
