@@ -34,16 +34,9 @@ export default function Button({
       }}
       size={size}
     >
-      <TideBlueSVG />
-      <div
-        style={{
-          zIndex: 1,
-        }}
-      >
+      <div>
         {leftIcon ? <LeftArrow /> : ""}
-        <span className="button-content" style={{ zIndex: 4 }}>
-          {content}
-        </span>
+        <span className="button-content">{content}</span>
         {rightIcon ? <RightArrow /> : ""}
       </div>
     </button>
@@ -82,25 +75,6 @@ const RightArrow = () => {
         clipRule="evenodd"
         d="M19.6052 5.64849C19.6044 5.64767 19.6036 5.64685 19.6028 5.64604L14.4573 0.369689C14.2691 0.176738 13.964 0.176738 13.7759 0.369689C13.5877 0.562641 13.5877 0.875477 13.7759 1.06843L18.1048 5.50741H0.737999C0.468485 5.50741 0.25 5.72589 0.25 5.99541C0.25 6.26492 0.468485 6.4834 0.737999 6.4834H18.1048L13.7759 10.9224C13.5877 11.1153 13.5877 11.4282 13.7759 11.6211C13.964 11.8141 14.2691 11.8141 14.4573 11.6211L19.6028 6.34477C19.6036 6.34396 19.6044 6.34314 19.6052 6.34232C19.6946 6.25387 19.75 6.13111 19.75 5.99541C19.75 5.8597 19.6946 5.73694 19.6052 5.64849Z"
       />
-    </svg>
-  );
-};
-
-const TideBlueSVG = () => {
-  return (
-    <svg
-      className="bubble"
-      // style={{
-      //   zIndex: -1,
-      //   position: "absolute",
-      // }}
-      width="56"
-      height="56"
-      viewBox="0 0 56 56"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <circle cx="28" cy="28" r="28" fill="#E5EAF1" />
     </svg>
   );
 };
