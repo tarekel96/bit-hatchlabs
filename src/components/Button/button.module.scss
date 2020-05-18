@@ -12,7 +12,7 @@ button {
   min-width: 122px;
   padding: 0 24px;
   border-radius: 4px;
-  font-family: objektiv-mk2 Raleway sans-serif;
+  font-family: objektiv-mk2;
   font-size: 16px;
   font-style: normal;
   font-weight: bold;
@@ -26,7 +26,7 @@ button {
   }
 
   &:hover {
-    cursor: url("../../styles/svg/bubble.svg") 16 16, move;
+    cursor: pointer;
   }
 }
 
@@ -50,7 +50,8 @@ button {
 }
 
 /***** TEXT BUTTONS *****/
-.text {
+.text,
+.d-text {
   &,
   &-clicked,
   &-disabled,
@@ -86,326 +87,288 @@ button {
 /**************************************************************** 
 LIGHT MODE
  ****************************************************************/
-@media (prefers-color-scheme: light) {
-  %secondaryColorAndBorder {
-    color: $deep-fishing-blue;
-    border: 2px solid $deep-fishing-blue;
+
+%primaryColorScheme {
+  background-color: $deep-fishing-blue;
+  color: $pearl-white;
+}
+%primaryTransitionColors {
+  background-color: #406195;
+  color: $pearl-white;
+  border: none;
+}
+%secondaryColorScheme {
+  background-color: $pearl-white;
+  color: $deep-fishing-blue;
+  border: 2px solid $deep-fishing-blue;
+}
+%secondaryTransitionColors {
+  background-color: $tide-pool-blue;
+  color: $deep-fishing-blue;
+  border: 2px solid $deep-fishing-blue;
+}
+%textColorScheme {
+  background-color: $pearl-white;
+  color: $deep-fishing-blue;
+}
+%textTransitionColors {
+  background-color: $tide-pool-blue;
+  color: $deep-fishing-blue;
+}
+%textTransitionYellow {
+  background-color: $seahorse-yellow;
+  color: $deep-fishing-blue;
+}
+%textTransitionOrange {
+  background-color: $starfish-orange;
+  color: $deep-fishing-blue;
+}
+%textTransitionBlue {
+  background-color: $undertow-blue;
+  color: $deep-fishing-blue;
+}
+%textTransitionAqua {
+  background-color: $sea-glass-aqua;
+  color: $deep-fishing-blue;
+}
+%textTransitionLink {
+  background-color: $pearl-white;
+  text-decoration: underline;
+}
+/***** PRIMARY BUTTON - (LIGHT MODE) *****/
+.primary {
+  @extend %primaryColorScheme;
+  &-clicked,
+  &:hover {
+    @extend %primaryTransitionColors;
   }
-  %textColorScheme {
+  &-disabled,
+  &-disabled-clicked {
+    background-color: $fin-grey;
+    color: $stingray-grey;
+  }
+}
+
+/***** SECONDARY BUTTON - (LIGHT MODE) *****/
+.secondary {
+  @extend %secondaryColorScheme;
+  &-clicked,
+  &:hover {
+    @extend %secondaryTransitionColors;
+  }
+  /***** SECONDARY DISABLED BUTTON *****/
+  &-disabled,
+  &-disabled-clicked {
+    color: $stingray-grey;
+    border-color: 2px solid $stingray-grey;
     background-color: $pearl-white;
-    color: $deep-fishing-blue;
   }
-  /***** PRIMARY BUTTON - (LIGHT MODE) *****/
-  .primary {
-    background-color: $deep-fishing-blue;
-    color: $pearl-white;
-    &-clicked {
-      background-color: #406195;
-      color: $pearl-white;
-      border: none;
-    }
-    &-disabled,
-    &-disabled-clicked {
-      background-color: $fin-grey;
-      color: $stingray-grey;
-    }
+}
 
-    &:hover,
-    &-clicked:hover {
-      cursor: url("../../styles/svg/bubble-primary.svg") 16 16, move;
-    }
+/***** TEXT BUTTONS - (LIGHT MODE) *****/
+.text {
+  @extend %textColorScheme;
+  border: none;
+  &-clicked,
+  &:hover {
+    @extend %textTransitionColors;
+    border: none;
   }
 
-  /***** SECONDARY BUTTON - (LIGHT MODE) *****/
-  .secondary {
+  /***** TEXT DISABLED BUTTON *****/
+  &-disabled,
+  &-disabled-clicked {
+    color: $stingray-grey;
     background-color: $pearl-white;
-    @extend %secondaryColorAndBorder;
-    border-width: 2px;
-    &-clicked {
-      background-color: $tide-pool-blue;
-      @extend %secondaryColorAndBorder;
-      border-width: 2px;
+    border: none;
+    .icon-left {
+      padding-right: 16px;
+      fill: $stingray-grey;
     }
 
-    &:hover,
-    &-clicked:hover {
-      cursor: url("../../styles/svg/bubble-secondary.svg") 16 16, move;
-    }
-    /***** SECONDARY DISABLED BUTTON *****/
-    &-disabled,
-    &-disabled-clicked {
-      color: $stingray-grey;
-      border-color: 2px solid $stingray-grey;
-      background-color: $pearl-white;
+    .icon-right {
+      padding-left: 16px;
+      fill: $stingray-grey;
     }
   }
 
-  /***** TEXT BUTTONS - (LIGHT MODE) *****/
-  .text {
+  /***** TEXT BUTTON (YELLOW COLOR) - only used in LIGHT MODE *****/
+  &-yellow {
     @extend %textColorScheme;
     border: none;
-    &-clicked {
-      background-color: $tide-pool-blue;
-      color: $deep-fishing-blue;
-      border: none;
-    }
-
-    &:hover,
-    &-clicked:hover {
-      cursor: url("../../styles/svg/bubble-text.svg") 16 16, move;
-    }
-    /***** TEXT DISABLED BUTTON *****/
-    &-disabled {
-      color: $stingray-grey;
-      background-color: $pearl-white;
-      border: none;
-      .icon-left {
-        padding-right: 16px;
-        fill: $stingray-grey;
-      }
-
-      .icon-right {
-        padding-left: 16px;
-        fill: $stingray-grey;
-      }
-    }
-
-    &-disabled-clicked {
-      color: $stingray-grey;
-      background-color: $pearl-white;
-      border: none;
-      .icon-left {
-        padding-right: 16px;
-        fill: $stingray-grey;
-      }
-
-      .icon-right {
-        padding-left: 16px;
-        fill: $stingray-grey;
-      }
-    }
-    /***** TEXT BUTTON (YELLOW COLOR) - only used in LIGHT MODE *****/
-    &-yellow {
-      @extend %textColorScheme;
-      border: none;
-    }
-
-    &-yellow-clicked {
-      background-color: $seahorse-yellow;
-      color: $deep-fishing-blue;
-      border: none;
-    }
-
-    &-yellow:hover,
-    &-yellow-clicked:hover {
-      cursor: url("../../styles/svg/bubble-text.svg") 16 16, move;
-    }
-    /***** TEXT BUTTON (ORANGE COLOR) - only used in LIGHT MODE *****/
-    &-orange {
-      @extend %textColorScheme;
-      border: none;
-    }
-
-    &-orange-clicked {
-      background-color: $starfish-orange;
-      color: $deep-fishing-blue;
-      border: none;
-    }
-
-    &-orange:hover,
-    &-orange-clicked:hover {
-      cursor: url("../../styles/svg/bubble-text.svg") 16 16, move;
-    }
-    /***** TEXT BUTTON (BLUE COLOR) - only used in LIGHT MODE *****/
-    &-blue {
-      @extend %textColorScheme;
-      border: none;
-    }
-
-    &-blue-clicked {
-      background-color: $undertow-blue;
-      color: $deep-fishing-blue;
-      border: none;
-    }
-
-    &-blue:hover,
-    &-blue-clicked:hover {
-      cursor: url("../../styles/svg/bubble-text.svg") 16 16, move;
-    }
-    /***** TEXT BUTTON (AQUA COLOR) - only used in LIGHT MODE *****/
-    &-aqua {
-      @extend %textColorScheme;
-      border: none;
-    }
-
-    &-aqua-clicked {
-      background-color: $sea-glass-aqua;
-      color: $deep-fishing-blue;
-      border: none;
-    }
-
-    &-aqua:hover,
-    &-aqua-clicked:hover {
-      cursor: url("../../styles/svg/bubble-text.svg") 16 16, move;
-    }
-    /***** TEXT WITH LINK BUTTON (LIGHT MODE) *****/
-    &-link {
-      @extend %textColorScheme;
-      border: none;
-    }
-
-    &-link-clicked {
-      text-decoration: underline;
-      border: none;
-      background-color: $pearl-white;
-    }
-
-    &-link:hover,
-    &-link-clicked:hover {
-      cursor: pointer;
-      text-decoration: underline;
-    }
   }
 
-  /***** ARROW ICONS (LIGHT MODE) *****/
-  .icon-left {
-    padding-right: 16px;
-    fill: $deep-fishing-blue;
+  &-yellow-clicked,
+  &-yellow:hover {
+    @extend %textTransitionYellow;
+    border: none;
   }
 
-  .icon-right {
-    padding-left: 16px;
-    fill: $deep-fishing-blue;
+  /***** TEXT BUTTON (ORANGE COLOR) - only used in LIGHT MODE *****/
+  &-orange {
+    @extend %textColorScheme;
+    border: none;
   }
+
+  &-orange-clicked,
+  &-orange:hover {
+    @extend %textTransitionOrange;
+    border: none;
+  }
+
+  /***** TEXT BUTTON (BLUE COLOR) - only used in LIGHT MODE *****/
+  &-blue {
+    @extend %textColorScheme;
+    border: none;
+  }
+
+  &-blue-clicked,
+  &-blue:hover {
+    @extend %textTransitionBlue;
+    border: none;
+  }
+
+  /***** TEXT BUTTON (AQUA COLOR) - only used in LIGHT MODE *****/
+  &-aqua {
+    @extend %textColorScheme;
+    border: none;
+  }
+
+  &-aqua-clicked,
+  &-aqua:hover {
+    @extend %textTransitionAqua;
+    border: none;
+  }
+
+  /***** TEXT WITH LINK BUTTON (LIGHT MODE) *****/
+  &-link {
+    @extend %textColorScheme;
+    border: none;
+  }
+
+  &-link-clicked,
+  &-link:hover {
+    @extend %textTransitionLink;
+    border: none;
+  }
+}
+
+/***** ARROW ICONS (LIGHT MODE) *****/
+.icon-left {
+  padding-right: 16px;
+  fill: $deep-fishing-blue;
+}
+
+.icon-right {
+  padding-left: 16px;
+  fill: $deep-fishing-blue;
 }
 
 /**************************************************************** 
 DARK MODE
  ****************************************************************/
-@media (prefers-color-scheme: dark) {
-  /***** PRIMARY BUTTON - (DARK MODE) *****/
-  .primary {
-    background-color: $pearl-white;
+
+/***** PRIMARY BUTTON - (DARK MODE) *****/
+.d-primary {
+  background-color: $pearl-white;
+  color: $deep-fishing-blue;
+  &-clicked,
+  &:hover {
+    background-color: $tide-pool-blue;
     color: $deep-fishing-blue;
-    &-clicked {
-      background-color: $tide-pool-blue;
-      color: $deep-fishing-blue;
-      border: 2px solid $deep-fishing-blue;
-    }
-
-    &-disabled,
-    &-disabled-clicked {
-      background-color: $fin-grey;
-      color: $stingray-grey;
-    }
-
-    &:hover,
-    &-clicked:hover {
-      cursor: url("../../styles/svg/bubble-primary-dmode.svg") 16 16, move;
-    }
+    border: 2px solid $deep-fishing-blue;
   }
-  /***** SECONDARY BUTTON - (DARK MODE) *****/
-  .secondary {
-    background-color: $ocean-blue;
+
+  &-disabled,
+  &-disabled-clicked {
+    background-color: $fin-grey;
+    color: $stingray-grey;
+  }
+}
+/***** SECONDARY BUTTON - (DARK MODE) *****/
+.d-secondary {
+  background-color: $ocean-blue;
+  color: $pearl-white;
+  border: 2px solid $pearl-white;
+  &-clicked,
+  &:hover {
+    background-color: #465273;
     color: $pearl-white;
     border: 2px solid $pearl-white;
-    &-clicked {
-      background-color: #465273;
-      color: $pearl-white;
-      border: 2px solid $pearl-white;
+  }
+  &-disabled,
+  &-disabled-clicked {
+    color: $seal-grey;
+    border-color: 2px solid $seal-grey;
+    background-color: $ocean-blue;
+  }
+}
+/***** TEXT BUTTONS - (DARK MODE) *****/
+.d-text {
+  & {
+    background-color: $ocean-blue;
+    color: $pearl-white;
+    border: none;
+    .icon-left {
+      padding-right: 16px;
+      fill: $pearl-white;
     }
 
-    &:hover,
-    &-clicked:hover {
-      cursor: url("../../styles/svg/bubble-secondary-dmode.svg") 16 16, move;
-    }
-
-    &-disabled,
-    &-disabled-clicked {
-      color: $seal-grey;
-      border-color: 2px solid $seal-grey;
-      background-color: $ocean-blue;
+    .icon-right {
+      padding-left: 16px;
+      fill: $pearl-white;
     }
   }
-  /***** TEXT BUTTONS - (DARK MODE) *****/
-  .text {
-    &,
-    &-yellow,
-    &-orange,
-    &-blue,
-    &-aqua {
-      background-color: $ocean-blue;
-      color: $pearl-white;
-      border: none;
+
+  &-clicked,
+  &:hover {
+    background-color: #465273;
+    color: $pearl-white;
+    border: none;
+    .icon-left {
+      padding-right: 16px;
+      fill: $pearl-white;
     }
 
-    &-clicked,
-    &-yellow-clicked,
-    &-orange-clicked,
-    &-blue-clicked,
-    &-aqua-clicked {
-      background-color: #465273;
-      color: $pearl-white;
-      border: none;
-    }
-
-    &,
-    &-yellow,
-    &-orange,
-    &-blue,
-    &-aqua,
-    &-clicked,
-    &-yellow-clicked,
-    &-orange-clicked,
-    &-blue-clicked,
-    &-aqua-clicked :hover {
-      cursor: url("../../styles/svg/bubble-text-dmode.svg") 16 16, move;
-    }
-
-    /***** TEXT DISABLED BUTTON *****/
-    &-disabled,
-    &-disabled-clicked {
-      color: $seal-grey;
-      background-color: $ocean-blue;
-      border: none;
-      .icon-left {
-        padding-right: 16px;
-        fill: $seal-grey;
-      }
-
-      .icon-right {
-        padding-left: 16px;
-        fill: $seal-grey;
-      }
-    }
-    /***** TEXT WITH LINK BUTTON (DARK MODE) *****/
-    &-link {
-      background-color: $ocean-blue;
-      color: $pearl-white;
-      border: none;
-    }
-
-    &-link-clicked {
-      background-color: $ocean-blue;
-      color: $pearl-white;
-      text-decoration: underline;
-      border: none;
-    }
-
-    &-link:hover,
-    &-link-clicked:hover {
-      cursor: pointer;
-      text-decoration: underline;
+    .icon-right {
+      padding-left: 16px;
+      fill: $pearl-white;
     }
   }
-  /***** ARROW ICONS (DARK MODE) *****/
-  .icon-left {
-    padding-right: 16px;
-    fill: $pearl-white;
+
+  /***** TEXT DISABLED BUTTON *****/
+  &-disabled,
+  &-disabled-clicked {
+    color: $seal-grey;
+    background-color: $ocean-blue;
+    border: none;
+    .icon-left {
+      padding-right: 16px;
+      fill: $seal-grey;
+    }
+
+    .icon-right {
+      padding-left: 16px;
+      fill: $seal-grey;
+    }
+  }
+  /***** TEXT WITH LINK BUTTON (DARK MODE) *****/
+  &-link {
+    background-color: $ocean-blue;
+    color: $pearl-white;
+    border: none;
   }
 
-  .icon-right {
-    padding-left: 16px;
-    fill: $pearl-white;
+  &-link-clicked {
+    background-color: $ocean-blue;
+    color: $pearl-white;
+    text-decoration: underline;
+    border: none;
+  }
+
+  &-link:hover,
+  &-link-clicked:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 }

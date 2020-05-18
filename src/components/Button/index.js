@@ -5,10 +5,12 @@ import styles from "./button.module.scss";
 
 /**
  * A React button component that dynamically changes themes, sizes, and adds arrow icons depending on the props passed to it.
- * Possible theme combinations: primary, primary-disabled, secondary, secondary-disabled, text, text-disabled, text-yellow, text-orange, text-blue, text-aqua
+ * Possible theme combinations
+ * Light Mode: primary, primary-disabled, secondary, secondary-disabled, text, text-disabled, text-yellow, text-orange, text-blue, text-aqua
+ * Dark Mode: d-primary, d-primary-disabled, d-secondary, d-secondary-disabled, d-text, d-text-disabled
  * @name Button
  * @param content - the content for the button
- * @param verison - the version of a button.
+ * @param verison - the version of a button. Prepend the version with a "d-" to use the dark version of the button
  * @param size - the size for a button: "big" or "small"
  * @param leftArrow - includes an arrow icon to the left of the content
  * @param rightArrow - includes an arrow icon to the right of the content
@@ -43,7 +45,7 @@ export const Button = ({
   );
 };
 
-const LeftArrow = (props) => {
+const LeftArrow = () => {
   return (
     <svg
       className={`${styles["icon-left"]}`}

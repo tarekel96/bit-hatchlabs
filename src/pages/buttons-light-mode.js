@@ -2,7 +2,7 @@ import React from "react";
 
 import { Button } from "../components/Button/index";
 
-export default function buttons() {
+export default function buttonsLightMode() {
   return (
     <section
       style={{
@@ -11,6 +11,7 @@ export default function buttons() {
         justifyContent: "space-between",
         textAlign: "center",
         marginTop: "3rem",
+        backgroundColor: "white",
       }}
     >
       <div>
