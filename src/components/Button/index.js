@@ -14,13 +14,13 @@ import styles from "./button.module.scss";
  * @param rightArrow - includes an arrow icon to the right of the content
  * @returns- returns a simple button component with various prop options to change it's styling
  */
-export default function Button({
+export const Button = ({
   content = "Button",
   version = "primary",
   size = "small",
   leftIcon = false,
   rightIcon = false,
-}) {
+}) => {
   const [clicked, setClick] = useState("");
   return (
     <button
@@ -41,7 +41,7 @@ export default function Button({
       </div>
     </button>
   );
-}
+};
 
 const LeftArrow = (props) => {
   return (

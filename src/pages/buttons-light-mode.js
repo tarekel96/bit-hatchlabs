@@ -1,6 +1,6 @@
 import React from "react";
 
-import Button from "../components/Button/index";
+import { Button } from "../components/Button/index";
 
 export default function buttons() {
   return (
@@ -36,6 +36,7 @@ export default function buttons() {
           <Button content="Text Big" version="text" size="big" />
           <Button content="Clicked" version="text-clicked" size="small" />
           <Button content="Disabled" version="text-disabled" size="small" />
+          <Button content="Disabled" version="text-disabled" />
         </div>
         <h3>Text Yellow</h3>
         <div>
@@ -86,6 +87,12 @@ export default function buttons() {
         <Button content="Text Left Icon" leftIcon version="text" size="big" />
         <Button content="Clicked" leftIcon version="text-clicked" size="big" />
         <Button
+          content="Disabled"
+          leftIcon
+          version="text-disabled"
+          size="small"
+        />
+        <Button
           content="Text Right Icon"
           rightIcon
           version="text"
@@ -95,6 +102,12 @@ export default function buttons() {
           content="Clicked"
           rightIcon
           version="text-clicked"
+          size="small"
+        />
+        <Button
+          content="Disabled"
+          rightIcon
+          version="text-disabled"
           size="small"
         />
         <Button content="Text Right Icon" rightIcon version="text" size="big" />
