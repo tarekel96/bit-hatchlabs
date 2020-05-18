@@ -9,7 +9,7 @@ import styles from "./button.module.scss";
  * Light Mode: primary, primary-disabled, secondary, secondary-disabled, text, text-disabled, text-yellow, text-orange, text-blue, text-aqua
  * Dark Mode: d-primary, d-primary-disabled, d-secondary, d-secondary-disabled, d-text, d-text-disabled
  * @name Button
- * @param content - the content for the button
+ * @param children - the content for the button, add text like would normally do for an html button
  * @param verison - the version of a button. Prepend the version with a "d-" to use the dark version of the button
  * @param size - the size for a button: "big" or "small"
  * @param leftArrow - includes an arrow icon to the left of the content
@@ -17,7 +17,7 @@ import styles from "./button.module.scss";
  * @returns- returns a simple button component with various prop options to change it's styling
  */
 export const Button = ({
-  content = "Button",
+  children = "button",
   version = "primary",
   size = "small",
   leftIcon = false,
@@ -38,7 +38,7 @@ export const Button = ({
     >
       <div>
         {leftIcon ? <LeftArrow /> : ""}
-        <span className="button-content">{content}</span>
+        <span className="button-content">{children}</span>
         {rightIcon ? <RightArrow /> : ""}
       </div>
     </button>

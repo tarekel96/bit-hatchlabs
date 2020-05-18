@@ -17,80 +17,85 @@ export default function ButtonsDarkMode() {
     >
       <div>
         <h3>Primary</h3>
-        <Button content="Primary" version="d-primary" size="small" />
-        <Button content="primary big" version="d-primary" size="big" />
-        <Button content="Clicked" version="d-primary-clicked" />
-        <Button content="Disabled" version="d-primary-disabled" />
-        <Button content="Danger" version="d-danger" />
-        <Button content="Danger Big" version="d-danger" size="big" />
+        <Button version="d-primary" size="small">
+          Primary
+        </Button>
+        <Button version="d-primary" size="big">
+          primary big
+        </Button>
+        <Button version="d-primary-clicked">Clicked</Button>
+        <Button version="d-primary-disabled">Disabled</Button>
+        <Button version="d-danger">Danger</Button>
+        <Button version="d-danger" size="big">
+          Danger Big
+        </Button>
       </div>
       <div>
         <h3>Secondary</h3>
-        <Button version="d-secondary" size="small" />
-        <Button content="secondary big" version="d-secondary" size="big" />
-        <Button content="Clicked" version="d-secondary-clicked" />
-        <Button content="Disabled" version="d-secondary-disabled" />
+        <Button version="d-secondary" size="small">
+          secondary small
+        </Button>
+        <Button version="d-secondary" size="big">
+          secondary big
+        </Button>
+        <Button version="d-secondary-clicked">Clicked</Button>
+        <Button version="d-secondary-disabled">Disabled</Button>
       </div>
       <div>
         <h3>Text Default</h3>
         <div>
-          <Button content="Text" version="d-text" size="small" />
-          <Button content="Text Big" version="d-text" size="big" />
-          <Button content="Clicked" version="d-text-clicked" size="small" />
-          <Button content="Disabled" version="d-text-disabled" size="small" />
+          <Button version="d-text" size="small">
+            Text
+          </Button>
+          <Button version="d-text" size="big">
+            ext Big
+          </Button>
+          <Button version="d-text-clicked" size="small">
+            Clicked
+          </Button>
+          <Button version="d-text-disabled" size="small">
+            Disabled
+          </Button>
         </div>
       </div>
       <div>
         <h3>Text with Icons</h3>
-        <Button
-          content="Text Left Icon"
-          leftIcon
-          version="d-text"
-          size="small"
-        />
-        <Button
-          content="Clicked"
-          leftIcon
-          version="d-text-clicked"
-          size="small"
-        />
-        <Button content="Text Left Icon" leftIcon version="d-text" size="big" />
-        <Button
-          content="Clicked"
-          leftIcon
-          version="d-text-clicked"
-          size="big"
-        />
-        <Button
-          content="Text Right Icon"
-          rightIcon
-          version="d-text"
-          size="small"
-        />
-        <Button
-          content="Clicked"
-          rightIcon
-          version="d-text-clicked"
-          size="small"
-        />
-        <Button
-          content="Text Right Icon"
-          rightIcon
-          version="d-text"
-          size="big"
-        />
-        <Button
-          content="Clicked"
-          rightIcon
-          version="d-text-clicked"
-          size="big"
-        />
+        <Button leftIcon version="d-text" size="small">
+          Text Left Icon
+        </Button>
+        <Button leftIcon version="d-text-clicked" size="small">
+          Clicked
+        </Button>
+        <Button leftIcon version="d-text" size="big">
+          Text Left Icon
+        </Button>
+        <Button leftIcon version="d-text-clicked" size="big">
+          Clicked
+        </Button>
+        <Button rightIcon version="d-text" size="small">
+          Text Right Icon
+        </Button>
+        <Button rightIcon version="d-text-clicked" size="small">
+          Clicked
+        </Button>
+        <Button rightIcon version="d-text" size="big">
+          Text Right Icon
+        </Button>
+        <Button rightIcon version="d-text-clicked" size="big">
+          Clicked
+        </Button>
       </div>
       <div>
         <h3>Text with Link</h3>
-        <Button content="Text" version="d-text-link" size="small" />
-        <Button content="Link Big" version="d-text-link" size="big" />
-        <Button content="Clicked" version="d-text-link-clicked" size="small" />
+        <Button version="d-text-link" size="small">
+          Text
+        </Button>
+        <Button version="d-text-link" size="big">
+          Link Big
+        </Button>
+        <Button version="d-text-link-clicked" size="small">
+          Clicked
+        </Button>
       </div>
     </section>
   );

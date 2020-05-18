@@ -12,113 +12,152 @@ export default function buttonsLightMode() {
         textAlign: "center",
         marginTop: "3rem",
         backgroundColor: "white",
+        color: "black",
       }}
     >
       <div>
         <h3>Primary</h3>
-        <Button content="Primary" version="primary" size="small" />
-        <Button content="primary big" version="primary" size="big" />
-        <Button content="Clicked" version="primary-clicked" />
-        <Button content="Disabled" version="primary-disabled" />
-        <Button content="Danger" version="danger" />
-        <Button content="Danger Big" version="danger" size="big" />
+        <Button version="primary" size="small">
+          Primary
+        </Button>
+        <Button version="primary" size="big">
+          primary big
+        </Button>
+        <Button version="primary-clicked">Clicked</Button>
+        <Button version="primary-disabled">Disabled</Button>
+        <Button version="danger">Danger</Button>
+        <Button version="danger" size="big">
+          Danger Big
+        </Button>
       </div>
       <div>
         <h3>Secondary</h3>
-        <Button version="secondary" size="small" />
-        <Button content="secondary big" version="secondary" size="big" />
-        <Button content="Clicked" version="secondary-clicked" />
-        <Button content="Disabled" version="secondary-disabled" />
+        <Button version="secondary" size="small">
+          secondary
+        </Button>
+        <Button version="secondary" size="big">
+          secondary big
+        </Button>
+        <Button version="secondary-clicked">Clicked</Button>
+        <Button version="secondary-disabled">Disabled</Button>
       </div>
       <div>
         <h3>Text Default</h3>
         <div>
-          <Button content="Text" version="text" size="small" />
-          <Button content="Text Big" version="text" size="big" />
-          <Button content="Clicked" version="text-clicked" size="small" />
-          <Button content="Disabled" version="text-disabled" size="small" />
-          <Button content="Disabled" version="text-disabled" />
+          <Button version="text" size="small">
+            Text
+          </Button>
+          >
+          <Button version="text" size="big">
+            Text Big
+          </Button>
+          <Button version="text-clicked" size="small">
+            Clicked
+          </Button>
+          <Button version="text-disabled" size="small">
+            Disabled
+          </Button>
+          <Button version="text-disabled">Disabled</Button>
         </div>
         <h3>Text Yellow</h3>
         <div>
-          <Button content="Text" version="text-yellow" size="small" />
-          <Button content="Text Big" version="text-yellow" size="big" />
-          <Button
-            content="Clicked"
-            version="text-yellow-clicked"
-            size="small"
-          />
-          <Button content="Disabled" version="text-disabled" size="small" />
+          <Button version="text-yellow" size="small">
+            Text
+          </Button>
+          <Button version="text-yellow" size="big">
+            Text Big
+          </Button>
+          <Button version="text-yellow-clicked" size="small">
+            Clicked
+          </Button>
+          <Button version="text-disabled" size="small">
+            Disabled
+          </Button>
         </div>
         <h3>Text Orange</h3>
         <div>
-          <Button content="Text" version="text-orange" size="small" />
-          <Button content="Text Big" version="text-orange" size="big" />
-          <Button
-            content="Clicked"
-            version="text-orange-clicked"
-            size="small"
-          />
-          <Button content="Disabled" version="text-disabled" size="small" />
+          <Button version="text-orange" size="small">
+            Text
+          </Button>
+          <Button version="text-orange" size="big">
+            Text Big
+          </Button>
+          <Button version="text-orange-clicked" size="small">
+            Clicked
+          </Button>
+          <Button version="text-disabled" size="small">
+            Disabled
+          </Button>
         </div>
         <h3>Text Blue</h3>
         <div>
-          <Button content="Text" version="text-blue" size="small" />
-          <Button content="Text Big" version="text-blue" size="big" />
-          <Button content="Clicked" version="text-blue-clicked" size="small" />
-          <Button content="Disabled" version="text-disabled" size="small" />
+          <Button version="text-blue" size="small">
+            Text
+          </Button>
+          <Button version="text-blue" size="big">
+            Text Big
+          </Button>
+          <Button version="text-blue-clicked" size="small">
+            Clicked
+          </Button>
+          <Button version="text-disabled" size="small">
+            Disabled
+          </Button>
         </div>
         <h3>Text Aqua</h3>
         <div>
-          <Button content="Text" version="text-aqua" size="small" />
-          <Button content="Text Big" version="text-aqua" size="big" />
-          <Button content="Clicked" version="text-aqua-clicked" size="small" />
-          <Button content="Disabled" version="text-disabled" size="small" />
+          <Button version="text-aqua" size="small">
+            Text
+          </Button>
+          <Button version="text-aqua" size="big">
+            Text Big
+          </Button>
+          <Button version="text-aqua-clicked" size="small">
+            Clicked
+          </Button>
+          <Button version="text-disabled" size="small">
+            Disabled
+          </Button>
         </div>
       </div>
       <div>
         <h3>Text with Icons</h3>
-        <Button content="Text Left Icon" leftIcon version="text" size="small" />
-        <Button
-          content="Clicked"
-          leftIcon
-          version="text-clicked"
-          size="small"
-        />
-        <Button content="Text Left Icon" leftIcon version="text" size="big" />
-        <Button content="Clicked" leftIcon version="text-clicked" size="big" />
-        <Button
-          content="Disabled"
-          leftIcon
-          version="text-disabled"
-          size="small"
-        />
-        <Button
-          content="Text Right Icon"
-          rightIcon
-          version="text"
-          size="small"
-        />
-        <Button
-          content="Clicked"
-          rightIcon
-          version="text-clicked"
-          size="small"
-        />
-        <Button
-          content="Disabled"
-          rightIcon
-          version="text-disabled"
-          size="small"
-        />
-        <Button content="Text Right Icon" rightIcon version="text" size="big" />
-        <Button content="Clicked" rightIcon version="text-clicked" size="big" />
+        <Button leftIcon version="text" size="small">
+          Text Left Icon
+        </Button>
+        <Button leftIcon version="text-clicked" size="small">
+          Clicked
+        </Button>
+        <Button leftIcon version="text" size="big">
+          Text Left Icon
+        </Button>
+        <Button leftIcon version="text-clicked" size="big">
+          Clicked
+        </Button>
+        <Button rightIcon version="text" size="small">
+          Text Right Icon
+        </Button>
+        <Button rightIcon version="text-clicked" size="small">
+          Clicked
+        </Button>
+        <Button rightIcon version="text" size="big">
+          Text Right Icon
+        </Button>
+        <Button rightIcon version="text-clicked" size="big">
+          Clicked
+        </Button>
       </div>
       <div>
         <h3>Text with Link</h3>
-        <Button content="Text" version="text-link" size="small" />
-        <Button content="Link Big" version="text-link" size="big" />
-        <Button content="Clicked" version="text-link-clicked" size="small" />
+        <Button version="text-link" size="small">
+          Text
+        </Button>
+        <Button version="text-link" size="big">
+          Link Big
+        </Button>
+        <Button version="text-link-clicked" size="small">
+          Clicked
+        </Button>
       </div>
     </section>
   );
