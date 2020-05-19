@@ -47,7 +47,6 @@ export default function buttonsLightMode() {
           <Button version="text" size="small">
             Text
           </Button>
-          >
           <Button version="text" size="big">
             Text Big
           </Button>
@@ -121,29 +120,29 @@ export default function buttonsLightMode() {
         </div>
       </div>
       <div>
-        <h3>Text with Icons</h3>
-        <Button leftIcon version="text" size="small">
-          Text Left Icon
+        <h3>Text with Arrows</h3>
+        <Button leftArrow version="text" size="small">
+          Text Left Arrow
         </Button>
-        <Button leftIcon version="text-clicked" size="small">
+        <Button leftArrow version="text-clicked" size="small">
           Clicked
         </Button>
-        <Button leftIcon version="text" size="big">
-          Text Left Icon
+        <Button leftArrow version="text" size="big">
+          Text Left Arrow
         </Button>
-        <Button leftIcon version="text-clicked" size="big">
+        <Button leftArrow version="text-clicked" size="big">
           Clicked
         </Button>
-        <Button rightIcon version="text" size="small">
-          Text Right Icon
+        <Button rightArrow version="text" size="small">
+          Text Right Arrow
         </Button>
-        <Button rightIcon version="text-clicked" size="small">
+        <Button rightArrow version="text-clicked" size="small">
           Clicked
         </Button>
-        <Button rightIcon version="text" size="big">
-          Text Right Icon
+        <Button rightArrow version="text" size="big">
+          Text Right Arrow
         </Button>
-        <Button rightIcon version="text-clicked" size="big">
+        <Button rightArrow version="text-clicked" size="big">
           Clicked
         </Button>
       </div>

@@ -2,8 +2,6 @@
 @import "../../styles/tokens.scss";
 // Adobe Objecktiv Mk2 font
 @import url("https://use.typekit.net/blp0kkw.css");
-// Google Raleway font
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400&display=swap");
 
 /***** BASE BUTTON *****/
 button {
@@ -24,7 +22,6 @@ button {
     align-items: center;
     justify-content: space-around;
   }
-
   &:hover {
     cursor: pointer;
   }
@@ -84,10 +81,18 @@ button {
   }
 }
 
-/**************************************************************** 
-LIGHT MODE
- ****************************************************************/
+/***** INHERITANCE *****/
+%leftIconSpacing {
+  position: relative;
+  right: 8px;
+}
 
+%rightIconSpacing {
+  position: relative;
+  left: 8px;
+}
+
+/***** LIGHT MODE INHERITANCE *****/
 %primaryColorScheme {
   background-color: $deep-fishing-blue;
   color: $pearl-white;
@@ -135,6 +140,11 @@ LIGHT MODE
   background-color: $pearl-white;
   text-decoration: underline;
 }
+
+/**************************************************************** 
+LIGHT MODE
+ ****************************************************************/
+
 /***** PRIMARY BUTTON - (LIGHT MODE) *****/
 .primary {
   @extend %primaryColorScheme;
@@ -165,6 +175,18 @@ LIGHT MODE
   }
 }
 
+/***** ICONS (LIGHT MODE) *****/
+.icon-left {
+  @extend %leftIconSpacing;
+  fill: $deep-fishing-blue;
+  transition: right 0.25s;
+}
+.icon-right {
+  @extend %rightIconSpacing;
+  fill: $deep-fishing-blue;
+  transition: left 0.25s;
+}
+
 /***** TEXT BUTTONS - (LIGHT MODE) *****/
 .text {
   @extend %textColorScheme;
@@ -175,6 +197,17 @@ LIGHT MODE
     border: none;
   }
 
+  /***** ICONS ANIMATION *****/
+  &:hover,
+  &-clicked:hover {
+    .icon-left {
+      right: 16px;
+    }
+    .icon-right {
+      left: 16px;
+    }
+  }
+
   /***** TEXT DISABLED BUTTON *****/
   &-disabled,
   &-disabled-clicked {
@@ -182,12 +215,12 @@ LIGHT MODE
     background-color: $pearl-white;
     border: none;
     .icon-left {
-      padding-right: 16px;
+      @extend %leftIconSpacing;
       fill: $stingray-grey;
     }
 
     .icon-right {
-      padding-left: 16px;
+      @extend %rightIconSpacing;
       fill: $stingray-grey;
     }
   }
@@ -253,17 +286,6 @@ LIGHT MODE
   }
 }
 
-/***** ARROW ICONS (LIGHT MODE) *****/
-.icon-left {
-  padding-right: 16px;
-  fill: $deep-fishing-blue;
-}
-
-.icon-right {
-  padding-left: 16px;
-  fill: $deep-fishing-blue;
-}
-
 /**************************************************************** 
 DARK MODE
  ****************************************************************/
@@ -303,6 +325,7 @@ DARK MODE
     background-color: $ocean-blue;
   }
 }
+
 /***** TEXT BUTTONS - (DARK MODE) *****/
 .d-text {
   & {
@@ -310,45 +333,57 @@ DARK MODE
     color: $pearl-white;
     border: none;
     .icon-left {
-      padding-right: 16px;
+      @extend %leftIconSpacing;
       fill: $pearl-white;
+      transition: right 0.25s;
     }
 
     .icon-right {
-      padding-left: 16px;
+      @extend %rightIconSpacing;
       fill: $pearl-white;
+      transition: left 0.25s;
     }
   }
 
-  &-clicked,
-  &:hover {
+  &-clicked {
     background-color: #465273;
     color: $pearl-white;
     border: none;
     .icon-left {
-      padding-right: 16px;
+      @extend %leftIconSpacing;
       fill: $pearl-white;
     }
 
     .icon-right {
-      padding-left: 16px;
+      @extend %rightIconSpacing;
       fill: $pearl-white;
     }
   }
 
-  /***** TEXT DISABLED BUTTON *****/
+  /***** ICON ANIMATION (DARK MODE) *****/
+  &:hover,
+  &-clicked:hover {
+    .icon-left {
+      right: 16px;
+    }
+    .icon-right {
+      left: 16px;
+    }
+  }
+
+  /***** TEXT DISABLED BUTTON (DARK MODE) *****/
   &-disabled,
   &-disabled-clicked {
     color: $seal-grey;
     background-color: $ocean-blue;
     border: none;
     .icon-left {
-      padding-right: 16px;
+      @extend %leftIconSpacing;
       fill: $seal-grey;
     }
 
     .icon-right {
-      padding-left: 16px;
+      @extend %rightIconSpacing;
       fill: $seal-grey;
     }
   }

@@ -48,7 +48,7 @@ export default function ButtonsDarkMode() {
             Text
           </Button>
           <Button version="d-text" size="big">
-            ext Big
+            Text Big
           </Button>
           <Button version="d-text-clicked" size="small">
             Clicked
@@ -59,29 +59,29 @@ export default function ButtonsDarkMode() {
         </div>
       </div>
       <div>
-        <h3>Text with Icons</h3>
-        <Button leftIcon version="d-text" size="small">
-          Text Left Icon
+        <h3>Text with Arrows</h3>
+        <Button leftArrow version="d-text" size="small">
+          Text Left Arrow
         </Button>
-        <Button leftIcon version="d-text-clicked" size="small">
+        <Button leftArrow version="d-text-clicked" size="small">
           Clicked
         </Button>
-        <Button leftIcon version="d-text" size="big">
-          Text Left Icon
+        <Button leftArrow version="d-text" size="big">
+          Text Left Arrow
         </Button>
-        <Button leftIcon version="d-text-clicked" size="big">
+        <Button leftArrow version="d-text-clicked" size="big">
           Clicked
         </Button>
-        <Button rightIcon version="d-text" size="small">
-          Text Right Icon
+        <Button rightArrow version="d-text" size="small">
+          Text Right Arrow
         </Button>
-        <Button rightIcon version="d-text-clicked" size="small">
+        <Button rightArrow version="d-text-clicked" size="small">
           Clicked
         </Button>
-        <Button rightIcon version="d-text" size="big">
-          Text Right Icon
+        <Button rightArrow version="d-text" size="big">
+          Text Right Arrow
         </Button>
-        <Button rightIcon version="d-text-clicked" size="big">
+        <Button rightArrow version="d-text-clicked" size="big">
           Clicked
         </Button>
       </div>

@@ -11,6 +11,7 @@ import ButtonsDarkMode from "../src/pages/buttons-dark-mode";
 function App() {
   return (
     <>
+      <h1>ADD TRANSITION TO ARROW</h1>
       {/* <Button>Hello World</Button> */}
       <ButtonsLightMode />
       <ButtonsDarkMode />
