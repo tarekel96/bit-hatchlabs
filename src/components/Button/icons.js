@@ -1,6 +1,6 @@
 import React from "react";
 
-export const LeftArrow = ({ styles }) => {
+export const LeftArrow = ({ styles = {} }) => {
   return (
     <svg
       className={`${styles["icon-left"]}`}
@@ -18,7 +18,7 @@ export const LeftArrow = ({ styles }) => {
   );
 };
 
-export const RightArrow = ({ styles }) => {
+export const RightArrow = ({ styles = {} }) => {
   return (
     <svg
       className={`${styles["icon-right"]}`}
