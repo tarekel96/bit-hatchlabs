@@ -42,7 +42,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
  * @param size - the size for a button: "big" or "small".
  * @param leftArrow - includes an arrow icon to the left of the content. Arrows are used only with the "text" variant of button.
  * @param rightArrow - includes an arrow icon to the right of the content. Arrows are used only with the "text" variant of button.
- * @returns- returns a simple button component with various prop options to change it's styling.
+ * @returns- returns a button component with various prop options to change it's styling.
  */
 var Button = function Button(_ref) {
   var _ref$children = _ref.children,

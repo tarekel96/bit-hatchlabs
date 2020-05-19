@@ -10,7 +10,8 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var LeftArrow = function LeftArrow(_ref) {
-  var styles = _ref.styles;
+  var _ref$styles = _ref.styles,
+      styles = _ref$styles === void 0 ? {} : _ref$styles;
   return /*#__PURE__*/_react.default.createElement("svg", {
     className: "".concat(styles["icon-left"]),
     width: "20",
@@ -27,7 +28,8 @@ var LeftArrow = function LeftArrow(_ref) {
 exports.LeftArrow = LeftArrow;
 
 var RightArrow = function RightArrow(_ref2) {
-  var styles = _ref2.styles;
+  var _ref2$styles = _ref2.styles,
+      styles = _ref2$styles === void 0 ? {} : _ref2$styles;
   return /*#__PURE__*/_react.default.createElement("svg", {
     className: "".concat(styles["icon-right"]),
     width: "20",

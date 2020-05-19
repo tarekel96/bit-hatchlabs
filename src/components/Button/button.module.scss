@@ -345,6 +345,12 @@ DARK MODE
     }
   }
 
+  &:hover {
+    background-color: #465273;
+    color: $pearl-white;
+    border: none;
+  }
+
   &-clicked {
     background-color: #465273;
     color: $pearl-white;
