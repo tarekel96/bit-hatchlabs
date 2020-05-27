@@ -1,0 +1,5 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.19306 15.5374C3.19411 15.5363 3.19516 15.5353 3.19622 15.5342L10.057 8.49904C10.3079 8.24177 10.7146 8.24177 10.9655 8.49904C11.2164 8.75631 11.2164 9.17343 10.9655 9.4307L5.1936 15.3493H28.3493C28.7087 15.3493 29 15.6406 29 16C29 16.3594 28.7087 16.6507 28.3493 16.6507H5.1936L10.9655 22.5693C11.2164 22.8266 11.2164 23.2437 10.9655 23.501C10.7146 23.7582 10.3079 23.7582 10.057 23.501L3.19622 16.4658C3.19516 16.4647 3.19411 16.4636 3.19306 16.4626C3.07385 16.3446 3 16.1809 3 16C3 15.8191 3.07385 15.6554 3.19306 15.5374Z" fill="#002D72"/>
+</svg>
+<!--  But the problem now is that the d attribute (which is the draw coordinates) of a path element is different for each of the sizes.  -->
+<!-- I think the solution would be to make functional components for each size of each icon. We would still be able to change colors.  -->

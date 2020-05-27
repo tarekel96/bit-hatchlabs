@@ -1,0 +1,45 @@
+.xlarge {
+  width: "48px";
+  height: "48px";
+}
+
+.large {
+  width: "32px";
+  height: "32px";
+}
+
+.medium {
+  width: "24px";
+  height: "24px";
+}
+
+.small {
+  width: "18px";
+  height: "18px";
+}
+
+/***** INHERITANCE *****/
+%leftIconSpacing {
+  position: relative;
+  right: 8px;
+}
+
+%rightIconSpacing {
+  position: relative;
+  left: 8px;
+}
+
+/***** ICONS (LIGHT MODE) *****/
+.icon-left {
+  @extend %leftIconSpacing;
+  transition: right 0.25s;
+  fill: "blue";
+}
+.icon-right {
+  @extend %rightIconSpacing;
+  transition: left 0.25s;
+  fill: "red";
+}
+
+// fill: $deep-fishing-blue;
+// fill: $deep-fishing-blue;

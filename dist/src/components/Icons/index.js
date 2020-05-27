@@ -74,4 +74,4 @@ var Icons = {
 };
 exports.Icons = Icons;
 
-//# sourceMappingURL=icons.js.map
+//# sourceMappingURL=index.js.map

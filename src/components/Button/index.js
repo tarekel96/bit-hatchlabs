@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 //import components
 import { LeftArrow, RightArrow } from "./icons.js";
+//import { RightIcon, Icons} from './icons.js'
 // import style module
 import styles from "./button.module.scss";
 
@@ -16,7 +17,7 @@ import styles from "./button.module.scss";
  * @param size {string} - the size for a button: "big" or "small".
  * @param leftArrow {boolean} - includes an arrow icon to the left of the content. Arrows are used only with the "text" variant of button.
  * @param rightArrow {boolean} - includes an arrow icon to the right of the content. Arrows are used only with the "text" variant of button.
- * @returns- returns a button component with various prop options to change it's styling.
+ * @return - returns a button component with various prop options to change it's styling.
  */
 export const Button = ({
   children = "button",
@@ -42,6 +43,7 @@ export const Button = ({
         {leftArrow ? <LeftArrow styles={styles} /> : ""}
         <span className="button-content">{children}</span>
         {rightArrow ? <RightArrow styles={styles} /> : ""}
+        {/* <RightIcon styles={styles} icon={Icons.RIGHT_ARROW} /> */}
       </div>
     </button>
   );

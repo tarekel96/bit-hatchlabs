@@ -25,8 +25,8 @@ export default function ButtonsDarkMode() {
         </Button>
         <Button variant="d-primary-clicked">Clicked</Button>
         <Button variant="d-primary-disabled">Disabled</Button>
-        <Button variant="d-danger">Danger</Button>
-        <Button variant="d-danger" size="big">
+        <Button variant="danger">Danger</Button>
+        <Button variant="danger" size="big">
           Danger Big
         </Button>
       </div>

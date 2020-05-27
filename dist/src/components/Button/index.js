@@ -38,11 +38,11 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
  * Dark Mode: d-primary, d-primary-disabled, d-secondary, d-secondary-disabled, d-text, d-text-disabled
  * @name Button
  * @param children - the content for the button, add text like would normally do for an html button.
- * @param variant - the version of a button. Prepend the version with a "d-" to use the dark version of the button.
- * @param size - the size for a button: "big" or "small".
- * @param leftArrow - includes an arrow icon to the left of the content. Arrows are used only with the "text" variant of button.
- * @param rightArrow - includes an arrow icon to the right of the content. Arrows are used only with the "text" variant of button.
- * @returns- returns a button component with various prop options to change it's styling.
+ * @param variant {string} - the version of a button. Prepend the version with a "d-" to use the dark version of the button.
+ * @param size {string} - the size for a button: "big" or "small".
+ * @param leftArrow {boolean} - includes an arrow icon to the left of the content. Arrows are used only with the "text" variant of button.
+ * @param rightArrow {boolean} - includes an arrow icon to the right of the content. Arrows are used only with the "text" variant of button.
+ * @return - returns a button component with various prop options to change it's styling.
  */
 var Button = function Button(_ref) {
   var _ref$children = _ref.children,
